@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MultiSelectController {
-  List<int> selectedIndexes = new List();
+  List<int> selectedIndexes = List<int>.empty(growable: true);
   bool isSelecting = false;
   bool disableEditingWhenNoneSelected = true;
   int listLength = 0;
@@ -86,20 +86,20 @@ class MultiSelectItem extends StatefulWidget {
   final VoidCallback onSelected;
 
   const MultiSelectItem({
-    Key key,
-    this.child,
-    @required this.isSelecting,
-    @required this.onSelected,
+    Key? key,
+    required this.child,
+    required this.isSelecting,
+    required this.onSelected,
   }) : super(key: key);
 
   @override
-  _MultiSelectItemState createState() => new _MultiSelectItemState();
+  _MultiSelectItemState createState() => _MultiSelectItemState();
 }
 
 class _MultiSelectItemState extends State<MultiSelectItem> {
   @override
   Widget build(BuildContext context) {
-    return new GestureDetector(
+    return GestureDetector(
       onLongPress: () {
         widget.onSelected();
       },

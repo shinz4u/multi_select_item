@@ -4,8 +4,8 @@ version: 1.0.1
 homepage: https://github.com/indokan2001/multi_select_item
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.20.0 <2.0.0"
+  sdk: ">=2.17.0 <4.0.0"
+  flutter: ">=2.5.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -14,6 +14,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+# Enable null safety by ensuring the Dart SDK version is compatible with null safety features.
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
